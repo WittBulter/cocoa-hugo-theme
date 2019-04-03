@@ -15,22 +15,22 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
     font-size: 1.75rem;
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
 }
 
 h2 {
     font-size: 1.5rem;
-    margin-bottom: 1.35rem;
+    margin-bottom: 1.2rem;
 }
 
 h3 {
     font-size: 1rem;
-    margin-bottom: .9rem;
+    margin-bottom: .7rem;
 }
 
 h4, h5, h6 {
     font-size: 1rem;
-    margin-bottom: 1rem;
+    margin-bottom: .7rem;
     letter-spacing: none;
 }
 
@@ -58,8 +58,8 @@ code {
 pre {
     /* Hugo specific: consider using the 'highlight' shortcode */
     display: block;
-    margin-top: 1.5rem;
-    margin-bottom: 2.5rem;
+    margin-top: 1.3rem;
+    margin-bottom: 2.2rem;
     padding: 1rem;
     line-height: 1.5em;
     white-space: pre-wrap;
@@ -73,7 +73,7 @@ pre {
 pre code {
     /* enclosed by 3 backticks (```) */
     padding: 0;
-    font-size: .9rem;
+    font-size: .92rem;
 
     &::before, &::after {
         content: '';
@@ -124,7 +124,13 @@ ul {
 }
 
 ul li {
-    list-style-type: disc;
+    &::before {
+        content: '-';
+        display: inline-block;
+        color: #999;
+        position: absolute;
+        margin-left: -1rem;
+    }
 }
 
 ol li {
